@@ -45,6 +45,8 @@ Hệ thống giao tiếp qua **Apache Kafka**, thể hiện tính chất **hệ 
 
 Python 3.10+ (khuyến nghị) và `pip`.
 
+Có thể tạo môi trường ảo thông qua venv hoặc conda
+
 Cài thư viện:
 
 ```bash
