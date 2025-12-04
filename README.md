@@ -1,6 +1,6 @@
 # Distributed Network Traffic Alert & Recommendation System
 
-Đây là dự án demo cho môn học về **hệ phân tán / mạng máy tính**:
+Đây là dự án về **hệ phân tán / mạng máy tính**:
 
 - Giám sát **traffic trong mạng** ở mức **link giữa các switch/router**.
 - Phát hiện **congestion / link down** và sinh **cảnh báo**.
@@ -22,7 +22,7 @@ Hệ thống giao tiếp qua **Apache Kafka**, thể hiện tính chất **hệ 
 ```text
 .
 ├── README.md
-├── docker-compose.yml        # Kafka + KRaft (Bitnami)
+├── docker-compose.yml        # Kafka + KRaft (apache)
 ├── requirements.txt
 ├── common
 │   ├── __init__.py
@@ -91,7 +91,7 @@ Khi mọi thứ chạy, API có tại: `http://localhost:8000/docs`
 - `GET /route?src=S1&dst=S4`  
   → Gợi ý route tối ưu giữa hai node mạng (S1 → S4).
 
-## 6. Gợi ý nội dung báo cáo
+## 6. Nội dung
 
 - Bài toán: Giám sát và tối ưu traffic mạng, hỗ trợ Traffic Engineering.
 - Kiến trúc: mô hình microservice + message broker (Kafka).
@@ -103,4 +103,3 @@ Khi mọi thứ chạy, API có tại: `http://localhost:8000/docs`
   3. API service subscribe `net_traffic_alerts` & `net_link_state` → expose REST API.
 - Thuật toán chọn đường: Dijkstra, trọng số cạnh = f(severity, latency).
 
-Bạn có thể copy hình vẽ kiến trúc và nội dung này vào báo cáo, chỉnh sửa theo style của mình.
